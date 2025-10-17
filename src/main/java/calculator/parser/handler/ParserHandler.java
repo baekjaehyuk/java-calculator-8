@@ -14,6 +14,10 @@ public class ParserHandler {
     }
 
     public String[] parse(String input) {
+        if (input == null) {
+            throw new NullPointerException(ErrorCode.INPUT_CANNOT_BE_NULL.getMessage(null));
+        }
+
         return parsers.stream()
                 .map(parser -> parser.parseInput(input))
                 .filter(Optional::isPresent)

@@ -27,7 +27,7 @@ public class AppConfig {
     public ParserHandler parserHandler() {
         return new ParserHandler(defaultDelimiterParser(), customDelimiterParser());
     }
-ㅈ
+
     public Parser defaultDelimiterParser() {
         return new DefaultDelimiterParser();
     }

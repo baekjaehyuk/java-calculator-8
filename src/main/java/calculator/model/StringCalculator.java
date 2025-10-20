@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class StringCalculator {
 
-    private static final int NON_NEGATIVE_THRESHOLD = 0;
+    private static final int POSITIVE_THRESHOLD = 1;
     private static final int EMPTY_RESULT = 0;
 
     public int sum(String[] numbers) {
@@ -21,7 +21,7 @@ public class StringCalculator {
     private int toPositiveInt(String value) {
         try {
             int number = Integer.parseInt(value);
-            if (number < NON_NEGATIVE_THRESHOLD) {
+            if (number < POSITIVE_THRESHOLD) {
                 throw new IllegalArgumentException(ErrorCode.NEGATIVE_NUMBER.getMessage(value));
             }
             return number;
